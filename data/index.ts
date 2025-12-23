@@ -1,0 +1,46 @@
+// data/index.ts
+import { Mock, Question } from './type';
+
+// 1. Import all your mock data files
+import * as cat2024slot1 from './pyp/cat/2024/slot1/varc';
+import * as cat2024slot1_quant from './pyp/cat/2024/slot1/qa';
+import * as gate2025slot1 from './pyp/gate/2025/slot1';
+import * as gate2024slot1 from './pyp/gate/2024/slot1';
+import * as webDev from './tech/web-dev';
+import * as dsa from './tech/dsa';
+import * as dataAnalysis from './tech/data-analysis';
+import * as cpp from './tech/cpp';
+import * as python from './tech/python';
+
+// 2. Combine them into the two arrays your app expects
+const allMocks: Mock[] = [
+  cat2024slot1.mock,
+  cat2024slot1_quant.mock,
+  gate2025slot1.mock,
+  gate2024slot1.mock,
+  webDev.mock,
+  dsa.mock,
+  dataAnalysis.mock,
+  cpp.mock,  
+  python.mock,
+  // ... add other mocks here
+];
+
+const allQuestions: Question[] = [
+  ...cat2024slot1.questions,
+  ...cat2024slot1_quant.questions,
+  ...gate2025slot1.questions,   
+  ...gate2024slot1.questions,
+  ...webDev.questions,
+  ...dsa.questions,
+  ...dataAnalysis.questions,
+  ...cpp.questions,
+  ...python.questions,
+  // ... add other questions here
+];
+
+// 3. Export the final object
+export const DEMO_DATA = {
+  mocks: allMocks,
+  questions: allQuestions,
+};

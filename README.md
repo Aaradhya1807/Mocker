@@ -222,7 +222,7 @@ Now open http://localhost:3000
 ---
 👤 Author
 
-Maulik
+Aaradhya Maharishi
 
 Thanks for checking this out!
 
